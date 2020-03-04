@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center" class="main-container-div">
+ <mat-tab-group class="smooth-scroll-div">
+  
+  <mat-tab *ngFor="let item of this._data; index as i;" label={{item.menu}} id={{item.menu}}>
+
+   
+   <div *ngFor="let row of item.items; index as i; count as c" class="loop-row-category">
+      
+        
+        <span class="loop-category">{{row.category}}</span>
+        <div class="category-container">
+          <div *ngFor="let catRow of row.data; index as ci; count as cc" class="loop-row">
+
+            <li *ngIf="catRow.isCurrency" class="cat-det-li cat-det-row"><span [innerHTML]="catRow.type"></span> - <span>{{catRow.value | currency : '$'}}</span></li>
+
+            <li *ngIf="!catRow.isCurrency && !catRow.isPaymentOption && !catRow.noBullet" class="cat-det-li cat-det-row">
+              <span [innerHTML]="catRow.type"></span> <span *ngIf="catRow.value != ''"> - </span><span [innerHTML]="catRow.value"></span>
+            </li>
+
+            <div *ngIf="catRow.isPaymentOption" class="">
+              <img class="cat-row-payment-option cat-row-payment-option-{{catRow.type}}" src="http://sponsorships.xitiz.net/dist/assets/img/{{catRow.value}}" />
+            </div>
+
+            <div *ngIf="catRow.noBullet" class="no-bullet cat-det-row">
+              <div class="row-font-bold" [innerHTML]="catRow.type"></div> <div [innerHTML]="catRow.value"></div>
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+    <div class="bottom-spacer"></div>
+  </mat-tab>
+
+</mat-tab-group>
+
+</div>
+

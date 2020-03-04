@@ -1,0 +1,65 @@
+.main-container-div{
+ 
+}
+
+.loop-row-category{
+  padding-top:20px;
+  text-align:center;
+}
+.loop-category{
+  font-weight:bold;
+  font-size:50px;
+}
+.category-container{
+  width:70%;
+  margin:auto 15% auto auto;
+}
+.loop-row{
+    height:auto;
+    border: none;
+    padding:6px;
+    font-size:40px;
+  }
+
+.smooth-scroll-div{
+  scroll-behavior: smooth;
+  z-index:0;
+  background-image: url(http://sponsorships.xitiz.net/dist/assets/img/Foyer%20PPT%20Backgrounds/Blue.jpg);
+  height:100%;
+  width:100%;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  min-height:100%;
+}
+
+.bottom-spacer{
+  height:200px;
+  display:block;
+}
+
+.cat-det-li{
+  text-align:left;
+}
+.cat-row-payment-option{
+  width:100px;
+  height:100px;
+  float:left;
+  margin-left:20px;
+}
+.cat-row-payment-option-cash{
+  margin-left:200px;
+}
+.cat-row-payment-option-check{
+  margin-top:-12px;
+}
+.cat-row-payment-option-card{
+  margin-top:-20px;
+}
+.row-font-bold{
+  font-weight:bold;
+}
+.no-bullet{
+  text-align:center;
+  width: 107%;
+}
